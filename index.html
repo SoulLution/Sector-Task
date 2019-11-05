@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./styles/all.min.css">
+		<link rel="stylesheet" type="text/css" href="./styles/main.css">
+		<title>Тестовое задание</title>
+		<script type="text/javascript" src="./scripts/main.js"></script>
+	</head>
+	<body>
+		<div class="page">
+			<div class="page-head">
+				<h1 class="page-head-title">Тестовое задание</h1>
+			</div>
+			<div class="page-body">
+
+
+				<div class="page-body-tabs" id="tabs">
+					<div id="tabs-none"> У вас нет товаров</div>
+				</div>
+
+				<div class="page-body-meters">
+					
+					<div class="side">
+						<div class="side-head">
+							<h3 class="side-head-title">Добавить товар</h3>
+						</div>
+						<div class="side-body">
+							<div class="side-body-item" title="Минимальная длина названия 5 символов!">
+								<label class="item-title" for="side-title">Название</label>
+								<input class="item-place" type="text" id="side-title" onkeyup="checkInput(this)">
+							</div>
+							<div class="side-body-item">
+								<label class="item-title" for="side-cost">Цена</label>
+								<input class="item-place" type="text" id="side-cost" onkeyup="checkInput(this, true)">
+							</div>
+
+						</div>
+						<div class="side-footer">
+							<div class="button" id="enter" onclick="enterProduct()">
+								<div class="button-background"></div>
+								<div class="button-title">Добавить</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="statistic">
+						<div class="statistic-item">
+							<div class="statistic-item-title">Всего товаров</div>
+							<div class="statistic-item-value" id="all-value">0шт.</div>
+						</div>
+
+						<div class="statistic-item">
+							<div class="statistic-item-title">Общая цена</div>
+							<div class="statistic-item-value" id="all-cost">0тг</div>
+						</div>
+						<div class="statistic-button">
+							<div class="button" id="enter" onclick="allDelete()">
+								<div class="button-background"></div>
+								<div class="button-title">Удалить все</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</body>
+</html>
