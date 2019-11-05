@@ -53,6 +53,14 @@ const enterProduct = (tit, cos, ind) => {
 		all_cost.innerHTML = (parseInt(all_cost.innerHTML.split('т').slice(0,1)) + parseInt(cost.value)) + 'тг'
 		tab_cost.innerHTML = cost.value + 'тг'
 
+		for(let i = 0; i < global_items.length; i++)
+			if(redact == global_items[i].index){
+				global_items[i].title = title.value
+				global_items[i].cost = cost.value
+				break
+			}
+		localStorage.setItem('global_items', JSON.stringify(global_items))
+
 		redact = 0
 	}
 	else{
